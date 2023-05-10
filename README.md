@@ -4,7 +4,7 @@
 
 ## Project member
 
-郭予捷
+郭予捷 罗宇
 
 ## What's this project for
 
