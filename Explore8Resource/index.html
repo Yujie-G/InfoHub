@@ -62,10 +62,10 @@
                                 <a class="nav-link text-white px-0 pt-0" href="index.html">主页</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link text-white px-0" href="about.html">资源</a>
+                                <a class="nav-link text-white px-0" href="resource.html">资源</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link text-white px-0" href="contact.html">公告</a>
+                                <a class="nav-link text-white px-0" href="post.html">公告</a>
                             </li>
                         </ul>
                     </div>
@@ -80,7 +80,7 @@
                     <div class="row align-items-center">
                         <div class="col-6">
                             <a href="index.html">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/logo.jpg" alt="">
                             </a>
                         </div>
                         <div class="col-6 text-right">
@@ -94,88 +94,116 @@
             <div class="nav-toggle-overlay"></div>
             <!-- end of mobile-nav -->
 
-            <div class="container pt-4 mt-5">
+
+            <div class="container mt-5">
                 <div class="row justify-content-between">
-                    <div class="col-lg-7">
-                        <div class="card post-item bg-transparent border-0 mb-5">
-                            <div class="card-body px-0">
-                                <h2 class="card-title">
-                                    <a class="text-white opacity-75-onHover" href="post-details.html">Id reprehrenderit
-                                        mollit in tempor naid incididunt cupidatat consectetura</a>
-                                </h2>
-                                <ul class="post-meta mt-3">
-                                    <li class="d-inline-block mr-3">
-                                        <span class="fas fa-clock text-primary"></span>
-                                        <a class="ml-1">17:12, May 12th</a>
-                                    </li>
-                                    <li class="d-inline-block">
-                                        <span class="fas fa-list-alt text-primary"></span>
-                                        <a class="ml-1" href="#">Photography</a>
-                                    </li>
-                                </ul>
-                                <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate cursus
-                                    porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
-                                <a href="post-details.html" class="btn btn-primary">Read More <img
-                                        src="images/arrow-right.png" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- end of post-item -->
+                    <i id="menu-toggle"></i>
+                    <i id="menu-close"></i>
+                    <div class="isotope-wrapper col-lg-7">
+                        <form class="isotope-toolbar position-sticky">
+                            <label>
+                                <input type="radio" data-type="*" checked="" name="isotope-filter" />
+                                <span>全部</span>
+                            </label>
+                            <label>
+                                <input type="radio" data-type="msg" name="isotope-filter" />
+                                <span>交流</span>
+                            </label>
+                            <label>
+                                <input type="radio" data-type="blog" name="isotope-filter" />
+                                <span>帖子</span>
+                            </label>
+                        </form>
+                        <div class="isotope-box">
 
-                        <div class="card post-item bg-transparent border-0 mb-5">
-                            <div class="card-body px-0">
-                                <h2 class="card-title">
-                                    <a class="text-white opacity-75-onHover" href="post-details.html">Excepteur ado Do
-                                        minim duis laborum Fugiat ea labore qui veniam labore</a>
-                                </h2>
-                                <ul class="post-meta mt-3">
-                                    <li class="d-inline-block mr-3">
-                                        <span class="fas fa-clock text-primary"></span>
-                                        <a class="ml-1" href="#">17:03, May 12th</a>
-                                    </li>
-                                    <li class="d-inline-block">
-                                        <span class="fas fa-list-alt text-primary"></span>
-                                        <a class="ml-1" href="#">生活</a>
-                                    </li>
-                                </ul>
-                                <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate cursus
-                                    porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
-                                <a href="post-details.html" class="btn btn-primary">阅读全文 <img
-                                        src="images/arrow-right.png" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- end of post-item -->
 
-                        <div class="card post-item bg-transparent border-0 mb-5">
-                            <div class="card-body px-0">
-                                <h2 class="card-title">
-                                    <a class="text-white opacity-75-onHover" href="post-details.html">Aliquip excepteur
-                                        cilludm irure laboris sint ea qui ex amet id. Ex nulla etno</a>
-                                </h2>
-                                <ul class="post-meta mt-3">
-                                    <li class="d-inline-block mr-3">
-                                        <span class="fas fa-clock text-primary"></span>
-                                        <a class="ml-1" href="#">24 April, 2016</a>
-                                    </li>
-                                    <li class="d-inline-block">
-                                        <span class="fas fa-list-alt text-primary"></span>
-                                        <a class="ml-1" href="#">生活</a>
-                                    </li>
-                                </ul>
-                                <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate cursus
-                                    porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
-                                <a href="post-details.html" class="btn btn-primary">Read More <img
-                                        src="images/arrow-right.png" alt=""></a>
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="post-details.html">Id
+                                            reprehrenderit
+                                            mollit in tempor naid incididunt cupidatat consectetura</a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">17:12, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">Photography</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate
+                                        cursus
+                                        porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
+                                    <a href="post-details.html" class="btn btn-primary">Read More <img
+                                            src="images/arrow-right.png" alt=""></a>
+                                </div>
                             </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="post-details.html">Excepteur ado
+                                            Do
+                                            minim duis laborum Fugiat ea labore qui veniam labore</a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">17:03, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">生活</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate
+                                        cursus
+                                        porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
+                                    <a href="post-details.html" class="btn btn-primary">阅读全文 <img
+                                            src="images/arrow-right.png" alt=""></a>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="msg">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="post-details.html">Aliquip
+                                            excepteur
+                                            cilludm irure laboris sint ea qui ex amet id. Ex nulla etno</a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">24 April, 2016</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">生活</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate
+                                        cursus
+                                        porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.</p>
+                                    <a href="post-details.html" class="btn btn-primary">Read More <img
+                                            src="images/arrow-right.png" alt=""></a>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
                         </div>
-                        <!-- end of post-item -->
                     </div>
                     <div class="col-lg-4 col-md-5">
                         <div class="widget">
                             <div class="mb-5 text-center">
-                                <h2 class="widget-title text-white d-inline-block">热门榜单</h2>
+                                <h3 class="widget-title text-white d-inline-block">热门榜单</h3>
                             </div>
                             <div class="card post-item bg-transparent border-0 mb-5">
                                 <div class="card-body px-0">
@@ -227,10 +255,10 @@
             </div>
 
             <!-- start of footer -->
-            <footer class="bg-dark">
-                <!-- <div class="container">
+            <footer>
+                <div class="container">
                     <div class="row text-center">
-                        <div class="col-lg-3 col-sm-6 mb-5">
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
                             <h5 class="font-primary text-white mb-4">Inspirations</h5>
                             <ul class="list-unstyled">
                                 <li><a href="#!">Privacy State</a></li>
@@ -239,7 +267,7 @@
                                 <li><a href="#!">Privacy</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-sm-6 mb-5">
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
                             <h5 class="font-primary text-white mb-4">Templates</h5>
                             <ul class="list-unstyled">
                                 <li><a href="#!">Privacy State</a></li>
@@ -248,7 +276,7 @@
                                 <li><a href="#!">Privacy</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-sm-6 mb-5">
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
                             <h5 class="font-primary text-white mb-4">Resource</h5>
                             <ul class="list-unstyled">
                                 <li><a href="#!">Privacy State</a></li>
@@ -257,17 +285,8 @@
                                 <li><a href="#!">Privacy</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-sm-6 mb-5">
-                            <h5 class="font-primary text-white mb-4">Company</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="#!">Privacy State</a></li>
-                                <li><a href="#!">Privacy</a></li>
-                                <li><a href="#!">State</a></li>
-                                <li><a href="#!">Privacy</a></li>
-                            </ul>
-                        </div>
                     </div>
-                </div> -->
+                </div>
             </footer>
             <!-- end of footer -->
         </div>
@@ -278,6 +297,9 @@
     <!-- All JS Files -->
     <script src="plugins/jQuery/jquery.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/custom.js"></script>
 
     <!-- Main Script -->
     <script src="js/script.js"></script>

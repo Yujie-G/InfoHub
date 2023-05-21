@@ -1,24 +1,8 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
-
 @charset "UTF-8";
-/*!------------------------------------------------------------------
-[MAIN STYLESHEET]
-
-PROJECT:	Galaxy - Personal Blog Template
-VERSION:	v1.0
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[TABLE OF CONTENTS]
--------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Montserrat:wght@400;500&display=swap");
 body {
   color: #B0B0B0;
-  background-color: rgb(13,17,23);
+  background-color: #010409;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.65;
@@ -75,12 +59,12 @@ body.loaded {
 }
 .btn:hover {
   color: #ffffff;
-  background-color: rgba(228, 17, 47, 0.7);
+  /* background-color: rgba(228, 17, 47, 0.7); */
 }
 .btn:active, .btn:focus {
   border: 0;
   color: #ffffff;
-  background-color: rgba(228, 17, 47, 0.7);
+  /* background-color: rgba(228, 17, 47, 0.7); */
   box-shadow: none;
 }
 
@@ -88,6 +72,23 @@ body.loaded {
   background-color: #E4112F;
 }
 
+.starbtn{
+  background-color: #E4112F;
+  border-radius: 50px;
+  padding: 10px 25px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  border-radius: 0;
+  border: 0;
+  font-size: 15px;
+  padding: 10px 25px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  border-radius: 0;
+  border: 0;
+}
 .search-form {
   margin-bottom: 35px;
 }
@@ -420,6 +421,7 @@ ul, li {
  # sidenav/navbar style
 -------------------------------------------------------------------*/
 .sidenav {
+  background-color: #0d1117;
   top: 0;
   width: 340px;
   min-height: 100vh;
@@ -570,6 +572,73 @@ ul, li {
 /*------------------------------------------------------------------
  # blog post style
 -------------------------------------------------------------------*/
+
+.isotope-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.isotope-toolbar input[type="radio"] {
+  display: none;
+}
+
+.isotope-toolbar span {
+  text-transform: capitalize;
+  display: inline-block;
+  margin-right: 25px;
+  padding-bottom: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transform: ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.isotope-toolbar input[type="radio"]:checked+span {
+  color: #2279BD;
+  border-bottom: 2px solid #2279BD;
+}
+
+.isotope-box {
+  position: relative;
+  width: 100%;
+}
+
+.isotope-toolbar {
+  text-align: center;
+  margin: 10px;
+}
+
+.isotope-toolbar p {
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+}
+
+.isotope-toolbar a {
+  color: #fff;
+}
+
+/* .isotope-item {
+  position: relative;
+  width: 31%;
+  margin: 1%;
+}
+
+.isotope-item img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+} */
+
+.avatar
+{
+  width: 40px;
+  height: 40px;
+}
+
+
 .post-item .card-img-top {
   transition: 0.3s;
 }
@@ -655,6 +724,11 @@ ul, li {
     font-size: 15px;
   }
 }
+
+.star {
+  color: yellow;
+}
+
 /*------------------------------------------------------------------
  # widget style
 -------------------------------------------------------------------*/
@@ -724,8 +798,8 @@ ul, li {
  # footer style
 -------------------------------------------------------------------*/
 footer {
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 footer ul li a {
   color: rgba(255, 255, 255, 0.6);

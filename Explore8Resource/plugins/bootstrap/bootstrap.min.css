@@ -5342,7 +5342,24 @@ input[type=submit].btn-block {
     }
 }
 
+.repo {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem
+}
+
+
 .card-title {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: .75rem
 }
 
@@ -9119,7 +9136,7 @@ button.bg-dark:hover {
 
 .mt-5,
 .my-5 {
-    margin-top: 3rem !important
+    margin-top: 1rem !important
 }
 
 .mr-5,
@@ -9129,7 +9146,7 @@ button.bg-dark:hover {
 
 .mb-5,
 .my-5 {
-    margin-bottom: 3rem !important
+    margin-bottom: 1rem !important
 }
 
 .ml-5,
