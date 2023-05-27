@@ -66,7 +66,7 @@
                                 <a class="nav-link text-white px-0" href="resource.html">Resource</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link text-white px-0" href="post.html">Events</a>
+                                <a class="nav-link text-white px-0" href="event.html">Events</a>
                             </li>
                         </ul>
                     </div>
@@ -84,10 +84,10 @@
                             <img src="images/logo.ico alt="">
                         </a>
                     </div>
-                    <div class="col-6 text-right">
-                        <button class="nav-toggle bg-transparent border text-white">
-                            <span class="fas fa-bars"></span>
-                        </button>
+                    <div class=" col-6 text-right">
+                            <button class="nav-toggle bg-transparent border text-white">
+                                <span class="fas fa-bars"></span>
+                            </button>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
 
                         <div class="isotope-item repo post-item bg-transparent border-0 mb-5" data-type="msg">
                             <div class="card-header">
-                                <img src="images/logo.jpg" alt="Avatar" class="rounded-circle avatar">
+                                <img src="images\\avatar\\avatar1.png" alt="Avatar" class="rounded-circle avatar">
                                 <label>name</label>
                                 <label>time</label>
                             </div>
@@ -131,14 +131,11 @@
                                             excepteur
                                         </a>
                                     </h2>
-                                    <!-- <a href="post-details.html" class="btn btn-primary">Read More <img
-                                            src="images/arrow-right.png" alt=""></a>  btn-outline-primary-->
-                                    <button type="button" class="starbtn" data-toggle="button"
-                                        aria-pressed="false">
+
+                                    <button type="button" class="starbtn" data-toggle="button" aria-pressed="false">
                                         <i class="star bi bi-star"></i>
                                         star
                                     </button>
-                                    
                                 </div>
 
                                 <ul class="post-meta mt-3">
@@ -175,12 +172,10 @@
                                     </h2>
                                     <!-- <a href="post-details.html" class="btn btn-primary">Read More <img
                                             src="images/arrow-right.png" alt=""></a>  btn-outline-primary-->
-                                    <button type="button" class="starbtn" data-toggle="button"
-                                        aria-pressed="false">
+                                    <button type="button" class="starbtn" data-toggle="button" aria-pressed="false">
                                         <i class="star bi bi-star"></i>
                                         star
                                     </button>
-                                    
                                 </div>
 
                                 <ul class="post-meta mt-3">
@@ -217,8 +212,7 @@
                                     </h2>
                                     <!-- <a href="post-details.html" class="btn btn-primary">Read More <img
                                             src="images/arrow-right.png" alt=""></a>  btn-outline-primary-->
-                                    <button type="button" class="starbtn" data-toggle="button"
-                                        aria-pressed="false">
+                                    <button type="button" class="starbtn" data-toggle="button" aria-pressed="false">
                                         <i class="star bi bi-star"></i>
                                         star
                                     </button>
@@ -265,8 +259,6 @@
                                         <a class="ml-1" href="#">Photography</a>
                                     </li>
                                 </ul>
-                                <a href="post-details.html" class="btn btn-primary">Read More <img
-                                        src="images/arrow-right.png" alt=""></a>
                             </div>
                         </div>
                         <!-- end of widget-post-item -->
@@ -287,8 +279,6 @@
                                         <a class="ml-1" href="#">Photography</a>
                                     </li>
                                 </ul>
-                                <a href="post-details.html" class="btn btn-primary">Read More <img
-                                        src="images/arrow-right.png" alt=""></a>
                             </div>
                         </div>
                         <!-- end of widget-post-item -->
@@ -343,16 +333,26 @@
     <!-- Main Script -->
     <script src="js/script.js"></script>
     <script>
-        // Get the button element
-        var btn = document.querySelector(".starbtn");
-        // Get the icon element
-        var icon = document.querySelector(".bi");
-        // Add a click event listener to the button
-        btn.addEventListener("click", function () {
-            // Toggle the icon class from bi-star to bi-star-fill
-            icon.classList.toggle("bi-star");
-            icon.classList.toggle("bi-star-fill");
-        });
+        // Get all the button elements
+        var btns = document.querySelectorAll(".starbtn");
+        // Loop through the button elements
+        for (var i = 0; i < btns.length; i++) {
+            // Get the current button element
+            var btn = btns[i];
+            // Get the icon element inside the button element
+            var icon = btn.querySelector(".bi");
+            // Add a click event listener to the button element
+            btn.addEventListener("click", (function (icon) {
+                // Return a function that takes icon as a parameter
+                return function () {
+                    // Toggle the icon class from bi-star to bi-star-fill
+                    icon.classList.toggle("bi-star");
+                    icon.classList.toggle("bi-star-fill");
+                };
+            })(icon)); // Invoke the function immediately and pass icon as an argument
+        }
+
+
     </script>
 </body>
 
