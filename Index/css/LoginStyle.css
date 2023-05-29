@@ -1,0 +1,70 @@
+@charset "utf-8";
+* {
+	margin: 0px ; 
+}
+body
+{
+	background-image: url("Blured photo.jpg") ;
+	background-size:cover ;
+	overflow-x: hidden ;
+}
+.main
+{
+	width: 100% ; 
+	height: 500px;
+	margin: 100px auto auto; 
+	background-color: #9E9E9E; 
+	background: rgba(99, 99 , 99 , 0.3);
+	border: 3px solid #B06200 ;
+}
+.child h1 , h2 
+{
+	text-align: center ; 
+	font-size: 40px; 
+	font-family: Akhbar MT, ACS  Islamy, ACS  Fayrouz Bold," AF_Al Hada", Alarabiya Font ;
+}
+
+.child form
+{
+	width: 50%;
+	margin: 37px auto 195px 280px; 
+	
+}
+input 
+{
+  direction: rtl ;
+  text-align: center ;
+  margin-bottom: 20px;	
+  margin-left: auto;
+  display: block ;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Hind', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid #B56B00;
+  border-radius: 23px;
+  color: white;
+  background-color: #2e2f49;
+  height: 30px;
+  width: 500px;
+  padding-left: 20px;
+}
+button 
+{
+	margin: 20px 550px auto 62px ; 
+	margin-left: 300px;
+	width: 399px ; 
+	height : 40px ; 
+	text-align: center ; 
+	display: block;
+	padding-top : 10px;
+	padding-bottom: 10px ; 
+	padding-left: auto ; 
+	padding-right: auto ; 
+	background-color: #0D0D27;
+	direction: rtl;
+	color: white ; 
+	font-size: 20px; 
+	font-weight: 300 ; 
+}
