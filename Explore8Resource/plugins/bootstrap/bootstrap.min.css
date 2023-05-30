@@ -5326,6 +5326,85 @@ input[type=submit].btn-block {
     animation: spin 2.5s linear infinite;
 }
 
+
+.blog-card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem
+}
+
+.blog-card>hr {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.blog-card>.list-group {
+    border-top: inherit;
+    border-bottom: inherit
+}
+
+.blog-card>.list-group:first-child {
+    border-top-width: 0;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px)
+}
+
+.blog-card>.list-group:last-child {
+    border-bottom-width: 0;
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px)
+}
+
+.blog-card-body {
+    background-color: rgb(13,17,23);
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    border: 2px solid rgb(45, 50, 57);
+    border-radius: 6px;
+}
+
+
+.blog-card:hover:before {
+    content: "";
+    width: 102%;
+    height: 103%;
+    border-radius: 6px;
+    background-image: linear-gradient(var(--rotate), #eb0000, #95008a 43%, #3300fc);
+    position: absolute;
+    z-index: -1;
+    top: -1.5%;
+    left: -1%;
+    animation: spin 2.5s linear infinite;
+}
+
+.blog-card:hover:after {
+    position: absolute;
+    content: "";
+    top: calc(var(--blog-card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--blog-card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #eb0000, #95008a 43%, #3300fc);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
