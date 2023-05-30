@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new post</title>
+	<link rel="stylesheet" type="text/css" href="style01.css">
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+			font:14px/1.5,normal,"-apple-system","Arial","sans-serif","宋体","Tahoma"
+		}
+		.heading{
+			width:auto;
+			height:52px;
+			padding-top:20px;
+			background: #24292e;
+			border:1px solid:#ccc;
+		}
+		.heading_img img{
+			border-radius:30px;/*圆角边框*/
+			display:inline;/*在一行当中*/
+			width:35px;
+			height:35px;
+			float:left;
+			margin-top:-5px;/*往上挪*/
+			margin-left:15px;
+		}
+		.heading_searchbox {
+			float:left;
+			position:relative;
+			margin-left: 15px;
+		}	
+		.heading_searchbox input{
+			width:300px;
+			height:28px;
+			outline:none;
+			border:1px solid #3F4448;
+			border-radius:3px;
+			background: #3F4448;
+			color:#fff;
+			text-indent:7px;
+		}
+		.heading_searchbox input:focus{
+			width:300px;
+			height:28px;
+			border-color:#66afe9;
+			outline:0;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+			 0 0 8px rgba(102,175,233,.6);/*点击发光效果*/
+		}
+		.heading_searchbox img{
+			display: block;
+			width: 34px;
+			height: 27px;
+			position:absolute;
+			top:5px;
+			left:265px;
+			cursor:pointer;
+		}
+		.heading_navbar ul{
+			list-style:none;
+			float:left;
+			margin-left:10px;
+			padding-top:6px;
+			padding-bottom:6px;
+		}
+		.heading_navbar li{
+			float: left;
+			padding-left:10px;
+		}
+		a{
+			text-decoration:none;
+			display:block;
+			text-align:center;
+		}
+		.heading_navbar a{
+			color:white;
+			font-size:15px;
+		}
+		.heading_navbar a:hover{
+			color:darkgray;
+		}
+		.heading_right{
+			position: absolute;
+			right:10px;
+			top:25px;
+			width: 150px;
+			height:50px;
+		}
+		.heading_right img{
+			width:30px;
+			height:30px;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+		.heading_right ul{
+			display: flex;
+			list-style:none;
+			float:left;
+			margin-left:10px;
+			padding-top:6px;
+			padding-bottom:6px;
+		}
+		.heading_right li{
+			float: left;
+			padding-left:10px;
+		}
+		
+		.heading_right_touxiang{
+			border-radius:30px;
+		}
+		
+		.body_right{
+			float:right;
+			width:100%;
+			height:750px;
+			position:relative;
+			background: black;
+		}
+		.right_mid{
+			width:50%;
+			height:650px;
+			margin:33px 20px;
+			position:relative;
+			left:25%;
+			background:#24292e;
+			border:.7px solid #4e94e2;
+			border-radius:10px;
+		}
+		.right_mid h4{
+			padding:35px 70px 12px 28px;
+			margin-right: 10px;
+			color: white;
+		}
+		.right_mid p{
+			font-size:16px;
+			padding-left:28px;
+			padding-right: 40px;
+			color:#24292E;
+		}
+		
+		.right_mid a{
+			display: inline;/*使a不换行*/
+			color:#0366d6;
+			text-decoration: none;
+		}
+		.right_mid a:hover{
+			color:#0366d6;
+			text-decoration: underline;
+		}
+		.right_mid button{
+			width:130px;
+			height:37px;
+			position: absolute;
+			right:30px;
+			bottom:40px;
+			display: block;
+			text-align:center;
+			font-size:15px;
+			font-family:verdana;
+			color:#1f75db;
+			border:1px solid #e2e3e3;
+			border-radius:6px;
+			background: white;
+			cursor: pointer;/*光标小手*/
+		}
+		.right_mid button:hover{
+			background:#0b5ebc;
+			color:white;
+		}
+		.fm1 input{
+			width:90%;
+			height:30px;
+			position: absolute;
+			left:25px;
+			outline: none;/*取消外边框*/
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+			box-shadow:inset 0 1px 2px rgba(27,31,35,.075);/*内部阴影*/
+			color:#AFB4B9; 
+			text-indent:11px;/*字缩进体*/
+			background-color: black;
+		}
+		.fm2 input{
+			width:90%;
+			height:80px;
+			left:20px;
+			position: absolute;
+			left:25px;
+		
+			outline: none;/*取消外边框*/
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+			box-shadow:inset 0 1px 2px rgba(27,31,35,.075);/*内部阴影*/
+			color:#AFB4B9; 
+			text-indent:11px;/*字缩进体*/
+			background-color: black;
+		}
+		.right_mid input:focus{
+			border-color:#66afe9;
+			outline:0;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+			 0 0 8px rgba(102,175,233,.6);/*点击发光效果*/
+		}
+		.clear{
+			width:100%;
+			height:30px;
+		}
+		.tp{
+			width:100%;
+			display: flex;
+		}
+		.tp input{
+			margin-top: 10px;
+			float:left;
+			position: relative;
+			width:16px;
+			height:16px;
+			background-color: black;
+		}
+		.tp h4{
+			
+		padding:10px 10px 18px 10px;
+		margin-right: 10px;
+			
+		}
+		.tc{
+			height: 80px;
+		}
+		.one{
+			flex:1;
+		}
+		.two{
+			flex:2;
+		}
+		.three{
+			
+			flex:2;
+			
+		}
+		.add{width: 30px;
+			height: 30px;
+			position:absolute;
+			right:140px;
+			top:10px;
+			background-color: #24292e;
+			color: whitesmoke;
+		}
+		.new{
+			display: none;
+			position:absolute;
+			z-index: 99999;
+			right:60px;
+			top:80px;
+			background-color: white;
+			width:130px;
+			height:70px;
+		}
+		.new a{
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="new" id="newpb">
+		<a href="index2.html">new post</a>
+		<a href="index3.html">new blog</a>
+		<a href="index4.html">new resource</a>
+	</div>
+	<div class="heading">
+		<div class="heading_img">
+			<img src="img/Infohub.png" alt="头像"/>
+		</div>
+		<div class="heading_searchbox">
+			<form>
+			<input type="text" placeholder="Search or jump to...">
+			
+			</form>
+		</div>
+		<div class="heading_navbar">
+			<ul>
+				<li><a href="#">Pull resqusts</a></li>
+				<li><a href="#">Lssues</a></li>
+				<li><a href="#">Marketplace</a></li>
+				<li><a href="#">Explore</a></li>
+			</ul>
+		</div>
+		<div class="heading_right">
+			<ul>
+			<li><img src="img/1.1.png"></li>
+			
+			<li><button type="button" class="add" id="addpb" >+</button></li>
+			
+			
+			<li><img class="heading_right_touxiang" src="img/2.jpeg"/></li>
+			</ul>
+		</div>
+	</div>
+
+	
+		<div class="body_right">
+			<div class="right_mid">
+				<h4>Create a new post</h4>
+				<p>Write down the experiences or experiences you want to share here
+				
+				</p>
+				<div class="clear">
+					
+				</div>
+				<div class="tp">
+					
+					<div class="one">  
+					<h4 >Category :</h4>
+					</div>
+					  <div class="two">
+					   <input type="radio" value="post" name="hobby"><h4>Secondhand</h4>
+					  <input type="radio" value="blog" name="hobby"><h4> for love</h4>
+					  </div>
+					  <div class="three">
+					  <input type="radio" value="soccer ball" name="hobby"><h4>for help</h4>
+					  <input type="radio" value="soccer ball" name="hobby"><h4> for recruitment</h4> 
+					</div>
+					
+				</div>
+				<div class="clear">
+					
+				</div>
+				<div class="tc">
+					<h4>Title :</h4>
+				</div>
+				<form class="fm1">
+				<input type="text" placeholder="Write here...">
+				</form>
+				<div class="tc">
+					<h4>
+						Content:
+					</h4>
+				</div>
+				<form class="fm2">
+				<input type="text" placeholder="Write here...">
+				</form>
+				<button type="button">Submit</button>
+			</div>
+			
+		</div>
+		
+
+</body>
+<script>
+	var add=document.getElementById("addpb");
+	add.onclick=function()
+	{
+		var s=document.getElementById("newpb");
+		
+		if(s.style.display=="none"){
+			s.style.display="block";
+		}
+		else{
+			s.style.display="none";
+		}
+	}
+</script>
+</html>
