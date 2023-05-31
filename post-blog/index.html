@@ -31,12 +31,15 @@
 			margin-left:15px;
 		}
 		.heading_searchbox {
+			width: 25%;
+
 			float:left;
 			position:relative;
 			margin-left: 15px;
 		}	
 		.heading_searchbox input{
-			width:300px;
+			width:100%;
+
 			height:28px;
 			outline:none;
 			border:1px solid #3F4448;
@@ -46,7 +49,8 @@
 			text-indent:7px;
 		}
 		.heading_searchbox input:focus{
-			width:300px;
+			width:100%;
+
 			height:28px;
 			border-color:#66afe9;
 			outline:0;
@@ -63,6 +67,7 @@
 			cursor:pointer;
 		}
 		.heading_navbar ul{
+			width:30%;
 			list-style:none;
 			float:left;
 			margin-left:10px;
@@ -89,7 +94,8 @@
 			position: absolute;
 			right:10px;
 			top:25px;
-			width: 150px;
+
+			width:10%;
 			height:50px;
 		}
 		.heading_right img{
@@ -115,9 +121,12 @@
 			border-radius:30px;
 		}
 		.body{
-			float;
+			
 			height: 1200px;
 			background: black;
+		    /* display: flex; */
+			width: auto;
+
 		}
 		.body_left{
 			
@@ -145,6 +154,8 @@
 			color:white;
 			line-height: 21px;
 			margin-bottom:4px;
+			font-size:100%;
+
 		}
 		
 		.body_left_one button{
@@ -176,6 +187,7 @@
 			color:white;
 			line-height: 21px;
 			margin-bottom:4px;
+			font-size: 90%;
 		}
 		.body_left_two{
 			width:255px;
@@ -203,7 +215,8 @@
 		.body_right{
 			float:right;
 			width:80%;
-			height:740px;
+			height:auto;
+
 			position:relative;
 			background: black;
 		}
@@ -256,7 +269,7 @@
 		.right_mid02 button{
 			position: absolute;
 			top: 30px;
-			left:580px;
+			left:75%;
 			
 			width:62px;
 			height:28px;
@@ -294,7 +307,8 @@
 		}
 		.right_mid03 p{
 			float:left;
-			font-size:12px;
+			font-size:20%;
+
 			color:white;
 			cursor:pointer;
 		}
@@ -310,7 +324,7 @@
 			margin-top:-20px;
 		}
 		.right_mid05{
-			width:65%;
+			width:63%;
 			height:auto;
 			margin:0px 20px;
 			position: relative;
@@ -321,8 +335,9 @@
 			border-radius:10px;
 		}
 		.comt1{
-			width:700px;
-			height:83px;
+			width:90%;
+			height:80px;
+
 			margin-bottom: 20px;
 			border:.7px solid #4e94e2;	
 			border-radius:10px;
@@ -342,11 +357,13 @@
 			float: left;
 			margin-top:10px;
 			margin-right: 35px;
+			font-size: 120%;
+
 			color: whitesmoke;
 		}
 		.right_right{
 			float:right;
-			width:380px;
+			width:30%;
 			height:700px;
 			margin-top:33px;
 			position:absolute;
@@ -503,7 +520,8 @@
 		.add{width: 30px;
 			height: 30px;
 			position:absolute;
-			right:140px;
+			right:100%;
+
 			top:10px;
 			background-color: #24292e;
 			color: whitesmoke;
@@ -629,11 +647,8 @@
 					<p>
 					<strong>Lebron James</strong>
 					<br/>
-					Automate any workflow with InfoHub Actions.
-				
-					See the latest updates and register for the
-					
-					beta.
+					These are my experience.
+
 					</p>
 					
 				</div>
@@ -750,7 +765,8 @@
 		
 		var lis=`<img src='img/2.jpeg'><p><strong>Stephen Curry</strong><br/>${value}</p>`
 		div.innerHTML=lis;
-		div.setAttribute("style","width:700px;height:83px;margin-bottom: 20px;border:.7px solid #4e94e2;border-radius:10px;background:#24292e;font-size:12px;color:#586080;");
+		div.setAttribute("style","width:90%;height:80px;margin-bottom: 20px;border:.7px solid #4e94e2;border-radius:10px;background:#24292e;font-size:12px;color:#586080;");
+
 		com.appendChild(div);
 		ip.value="";
 		ip.focus();
