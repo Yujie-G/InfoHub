@@ -1,0 +1,294 @@
+*{
+	margin:0;
+	padding:0;
+	font:14px/1.5,normal,"-apple-system","Arial","sans-serif","宋体","Tahoma"
+}/*样式清除*/
+body{ background:#000000} 
+ /* 分成三部分 */
+.heading{
+	width:auto;
+	height:52px;
+	padding-top:20px;
+	background: #24292e;
+	border:1px solid#000000;
+}
+
+.heading_navbar{
+	width: 100%;
+	height:30px;
+	position:relative;
+}
+.heading_navbar ul{
+	list-style:none;/*去掉无序前的小点*/
+	float:left;
+	margin-left:10px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+.heading_navbar li{
+	float: left;/*垂直的导航栏可以变成水平的*/
+	padding-left:10px;
+}
+.heading_navbar a{
+	text-decoration:none;/*去a标签的下划线*/
+	display:block;
+	text-align:center;/*居中*/
+}
+.heading_navbar a{
+	color:white;
+	font-size:15px;
+}
+.heading_navbar a:hover{
+	color:darkgray;/*鼠标放上去时变成灰色的*/
+}
+
+.heading_right{
+	position: absolute;
+	right:10px;
+	top:25px;
+	width: 130px;
+	height:50px;
+}
+.heading_right img{
+	width:30px;
+	height:30px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.heading_right_touxiang{
+	border-radius:30px;
+}
+
+
+.body{
+	width: 1230px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	
+	}
+.body_left{
+	float:left;
+	width:20%;
+	height:750px;
+	background: rgb(37, 37, 37);
+}
+.body_right{
+	float:left;
+	width:80%;
+	height:750px;
+	position:relative;
+    background: #474747;
+}
+/* 分成三部分（tail） */
+/* logo */
+.heading_img img{
+	border-radius:30px;/*圆角边框，变成圆形的头像*/
+	display:inline;/*在一行当中*/
+	width: 50px;
+	height: 50px;
+	float:left;/*向左浮动*/
+	margin-top:-10px;/*往上挪*/
+	margin-left:15px;
+}
+/* logo (tail*/
+/* 搜索框 */
+.heading_searchbox form{
+	float:left;
+	position:relative;
+	margin-left: 15px;
+}	
+.heading_searchbox input{
+	width:300px;
+	height:28px;
+	outline:none;
+	border:1px solid #282828;/*边框*/
+	border-radius:3px;/*显得的不那么方，有点弧度的四个角*/
+	background: #3F4448;
+	color:#909090;
+	text-indent:7px;/*字符缩进*/
+}
+.heading_searchbox input:focus{/*点击时应该有的效果，我这里有的问题*/
+	width:300px;
+	height:28px;
+	outline:black;
+	background: #333333;
+	border:1px solid #353535;
+}
+
+/* 搜索框（ */
+/* 左边的图片 */
+.avatar {
+
+	/* Center the content */
+	margin: 0 auto;
+	justify-content: center;
+	padding:10%;
+
+	height: 100px;
+}
+.avatar__image {
+	/* Rounded border */
+	align-items: center;
+	border-radius: 50%;
+	/* margin-left: 10%;
+	margin-top:10%; */
+	float: left;
+	/* Size */
+	width: 100%;
+	/* border: 20px solid yellow; */
+}
+
+.name_text{
+padding-top:40px;
+color: rgb(128, 128, 128);
+font-family:黑体;
+font-size: larger;
+font-weight: bold;
+margin:0 auto;
+text-align: center;
+}
+
+
+.bottom{
+	width:100%;
+	height:163px;
+	margin:0 auto;
+}
+ 
+.bottom_top_left{
+	background: #13191E;
+	width:50%;
+	height:163px;
+	float:left;
+}
+ 
+.bottom_top_left_img{
+	width:64px;
+	height:74px;
+	float:left;
+	margin-left: 260px;
+	margin-top: 40px;
+}
+ 
+.bottom_top_left_h{
+	width:40%;
+	height:121px;
+	float:left;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+ 
+.bottom_top_left_h h4{
+	font-size:20px;
+	width:362px;
+	color:#fff;
+	margin-top: 0px;
+	font-family: InterUI,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+    font-weight: 500;
+	float:left;
+}
+ 
+.bottom_top_left_h p{
+	width:362px;
+	float:left;
+	font-size:16px;
+	color:#ffffff;
+	margin-top: -11px;
+	font-family: InterUI,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+    font-weight: 500;
+}
+ 
+/* .bottom_top_right_p{
+	width:426px;
+	height:72px;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	margin:30px;
+	font-family: InterUI,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Oxygen,Ubuntu,Cantarell,"Open Sans",sans-serif;
+    font-weight: 500;
+}
+  */
+
+ 
+.bottom_top_right{
+	background-color: #10181e;
+	width:50%;
+	height:163px;
+	float:left;
+	overflow:hidden;
+}
+.ml-1 img{
+/* 帖子头像 */
+width:30px;
+float:right;
+border-radius:30px;
+}
+
+
+
+/* 帖子整体 */
+.isotope-item{
+	border:1px solid #494a4a;
+	background:#434242;
+
+transition-duration: 0.5s; 
+margin:20px;
+margin-top:30px;
+}
+.isotope-item:hover{
+	-webkit-box-shadow: #fdfdfd 100px 10px 10px;
+	-moz-box-shadow: #ffffff 10px 10px 10px;
+	box-shadow: #d3f2f7 3px 10px 20px ;  }
+/* 帖子内部 */
+.px-0{
+
+padding: 20px;
+
+
+}
+
+.card-text,.text-white{
+overflow:hidden;           
+text-overflow:ellipsis;           
+display:-webkit-box;           
+-webkit-line-clamp:2;         
+-webkit-box-orient:vertical;
+}
+a:link { 
+	color:#9c9b9b;  
+	text-decoration:none; 
+	} 
+	a:visited { 
+		color:#9c9b9b; 
+		text-decoration:none;
+	}
+	a:hover { 
+	color:#000000; 
+	text-decoration:none; 
+	} 
+	a:active { 
+	color:#FFFFFF; 
+	text-decoration:none; 
+	} 
+
+	/* 滚动条整体样式 */
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+	background-color: transparent;
+  }
+   
+  /* 滚动条里面小方块 */
+  ::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 2px;
+  }
+  /*滚动条里面轨道*/
+  ::-webkit-scrollbar-track {
+	background-color: transparent;
+  }
+  .like{ font-size:66px;  color:yellow; cursor:pointer;} /*原始样式*/
+  .like.cs{color:rgb(218, 218, 218);}/*点击后出现样式*/
