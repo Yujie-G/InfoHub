@@ -13,15 +13,16 @@ body
 	width: 100% ; 
 	height: 500px;
 	margin: 100px auto auto; 
-	background-color: #9E9E9E; 
-	background: rgba(99, 99 , 99 , 0.3);
-	border: 3px solid #B06200 ;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .child{
-	width: 50%;
+	background-color: #9E9E9E; 
+	background: rgba(99, 99 , 99 , 0.3);
+	border: 3px solid #B06200 ;
+	width: 40%;
 	height: 80%;
 	display: flex;
 	justify-content: center;
