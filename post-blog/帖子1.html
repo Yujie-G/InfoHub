@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求问数据结构</title>
+	<link rel="stylesheet" type="text/css" href="style01.css">
+	<style>
+		
+		*{
+			margin:0px;
+			padding:0px;
+			font:14px/1.5,normal,"-apple-system","Arial","sans-serif","宋体","Tahoma"
+		}
+		 
+		.heading{
+			
+			width:80%;
+			height:52px;
+			padding-top:20px;
+			background: #24292e;
+			border:1px solid:#ccc;
+			float:right;
+		}
+		.heading_img img{
+			border-radius:30px;/*圆角边框*/
+			display:inline;/*在一行当中*/
+			width:35px;
+			height:35px;
+			float:left;
+			margin-top:-5px;/*往上挪*/
+			margin-left:15px;
+		}
+		.heading_searchbox {
+			width: 25%;
+			float:left;
+			position:relative;
+			margin-left: 15px;
+		}	
+		.heading_searchbox input{
+			width:100%;
+			height:28px;
+			outline:none;
+			border:1px solid #3F4448;
+			border-radius:3px;
+			background: #3F4448;
+			color:#fff;
+			text-indent:7px;
+		}
+		.heading_searchbox input:focus{
+			width:100%;
+			height:28px;
+			border-color:#66afe9;
+			outline:0;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+			 0 0 8px rgba(102,175,233,.6);/*点击发光效果*/
+		}
+		.heading_searchbox img{
+			display: block;
+			width: 34px;
+			height: 27px;
+			position:absolute;
+			top:5px;
+			left:265px;
+			cursor:pointer;
+		}
+		.heading_navbar ul{
+			width:30%;
+			list-style:none;
+			float:left;
+			margin-left:10px;
+			padding-top:6px;
+			padding-bottom:6px;
+		}
+		.heading_navbar li{
+			float: left;
+			padding-left:10px;
+		}
+		a{
+			text-decoration:none;
+			display:block;
+			text-align:center;
+		}
+		.heading_navbar a{
+			color:white;
+			font-size:15px;
+		}
+		.heading_navbar a:hover{
+			color:darkgray;
+		}
+		.heading_right{
+			position: absolute;
+			right:1%;
+			top:25px;
+			width:auto;
+			height:50px;
+		}
+		.heading_right img{
+			width:30px;
+			height:30px;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+		.heading_right ul{
+			display: flex;
+			list-style:none;
+			float:left;
+			margin-left:10px;
+			padding-top:6px;
+			padding-bottom:6px;
+		}
+		.heading_right li{
+			float: left;
+			padding-left:10px;
+		}
+		
+		.heading_right_touxiang{
+			border-radius:30px;
+		}
+		.body{
+			
+			height: 1200px;
+			background: black;
+		    /* display: flex; */
+			width: auto;
+		}
+		.body_left{
+			
+			position: fixed;
+			width:20%;
+			height:1000px;
+			background: #24292e;
+		}
+		
+		.body_left_one{
+			width:100%;
+			height:33px;
+			margin:30px 15px 4px 20px;
+		}
+		.body_left_one img{
+			border-radius:30px;/*圆角边框*/
+			display:inline;/*在一行当中*/
+			width:35px;
+			height:35px;
+			float:left;
+			margin-top:-5px;/*往上挪*/
+			margin-left:15px;
+		}
+		.body_left_one h6{
+			color:white;
+			line-height: 21px;
+			margin-bottom:4px;
+			font-size:100%;
+		}
+		
+		.body_left_one button{
+			position: absolute;
+			left: 200px;
+			top:120px;
+			width:62px;
+			height:28px;
+			margin-top:-24px;
+			margin-right: 22px;
+			display: block;
+			border:1px solid #e2e3e3;
+			border-radius:3px;
+			color:white;
+			background-color:#28a745;
+			background-image:
+			linear-gradient(-180deg,#34d058,#28a745 90%); /*图片颜色线性渐变*/
+			cursor:pointer;
+		}
+		.body_left_one button:hover{
+			background: #28a745;
+		}
+		.body_left_1{
+			width:100%;
+			height:33px;
+			margin:30px 15px 4px 20px;
+		}
+		.body_left_1 h6{
+			color:white;
+			line-height: 21px;
+			margin-bottom:4px;
+			font-size: 90%;
+		}
+		.body_left_two{
+			width:100%;
+			height:35px;
+			margin:0px 15px 10px 20px;
+		}
+		.body_left_two input{
+			width:90%;
+			height:35px;
+			outline: none;/*取消外边框*/
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+			box-shadow:inset 0 1px 2px rgba(27,31,35,.075);/*内部阴影*/
+			color:#AFB4B9; 
+			text-indent:11px;/*字缩进体*/
+			background-color: black;
+		}
+		.body_left_two input:focus{
+			border-color:#66afe9;
+			outline:0;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+			 0 0 8px rgba(102,175,233,.6);/*点击发光效果*/
+		}
+		
+		.body_right{
+			float:right;
+			width:80%;
+			height:auto;
+			position:relative;
+			background: black;
+		}
+		.right_mid{
+			width:63%;
+			height:auto;
+			margin:33px 20px;
+			position:relative;
+			background: black;
+			border:.7px solid #4e94e2;
+			border-radius:10px;
+		}
+		.right_mid h4{
+			padding:35px 70px 12px 28px;
+			margin-right: 10px;
+			color: cornflowerblue;
+		}
+		.right_mid p{
+			font-size:16px;
+			padding-left:28px;
+			padding-right: 40px;
+			color:white;
+		}
+		
+		.right_mid02{
+			width:65%;
+			height:70px;
+			margin:0px 20px;
+			position:relative;
+			background-color: black;
+		}
+		.right_mid02 input{
+			width:70%;
+			height:35px;
+			outline: none;/*取消外边框*/
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+			box-shadow:inset 0 1px 2px rgba(27,31,35,.075);/*内部阴影*/
+			color:#AFB4B9; 
+			text-indent:11px;/*字缩进体*/
+			background-color:black;
+			
+		}
+		.right_mid02 input:focus{
+			border-color:#66afe9;
+			outline:0;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+			 0 0 8px rgba(102,175,233,.6);/*点击发光效果*/
+		}
+		.right_mid02 button{
+			position: absolute;
+			top: 30px;
+			left:75%;
+			
+			width:62px;
+			height:28px;
+			margin-top:-24px;
+			margin-right: 22px;
+			display: block;
+			border:1px solid #e2e3e3;
+			border-radius:3px;
+			color:white;
+			background-color:#28a745;
+			background-image:
+			linear-gradient(-180deg,#34d058,#28a745 90%); /*图片颜色线性渐变*/
+			cursor:pointer;
+		}
+		.right_mid02 button:hover{
+			background: #28a745;
+		}
+		.right_mid03{
+			width:100%;
+			height:150px;
+			
+			position: relative;
+			left: 0px;
+			bottom: 0px;
+			background-color: black;
+		}
+		.right_mid03 img{
+			width:40px;
+			height:32px;
+			margin-top:-6px;
+			border:none;
+			float: left;
+			left:200px;
+			cursor:pointer;
+		}
+		.right_mid03 p{
+			float:left;
+			font-size:20%;
+			color:white;
+			cursor:pointer;
+		}
+		.right_mid04{
+			position: absolute;
+			left:30%;
+			font-size:12px;
+			color: #586080;
+			cursor:pointer;
+		}
+		.right_mid04 td{
+			padding:5px 27px 2px 27px;
+			margin-top:-20px;
+		}
+		.right_mid05{
+			width:63%;
+			height:auto;
+			margin:0px 20px;
+			position: relative;
+			left: 0px;
+			bottom: 0px;
+			background: black;
+			border:.7px solid #4e94e2;
+			border-radius:10px;
+		}
+		.comt1{
+			width:90%;
+			height:80px;
+			margin-bottom: 20px;
+			border:.7px solid #4e94e2;	
+			border-radius:10px;
+			background:#f1f8ff;
+			font-size:12px;
+			background-color: #24292e;
+		}
+		.right_mid05 img{
+			width:30px;
+			height:30px;
+			margin:8px 5px 5px 8px;
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		.right_mid05 p{
+			float: left;
+			margin-top:10px;
+			margin-right: 35px;
+			font-size: 120%;
+			color: whitesmoke;
+		}
+		.right_right{
+			float:right;
+			width:30%;
+			height:700px;
+			margin-top:33px;
+			position:absolute;
+			right:0px;
+			top:0px;
+		}
+		.demo01{
+			width:98%;
+			height:auto;
+			margin-bottom: 20px;
+			border:.7px solid #4e94e2;	
+			border-radius:10px;
+			overflow: hidden;
+			font-size:12px;
+			background-color:#24292e;
+		}
+		
+		.demo01 img{
+			width:30px;
+			height:30px;
+			margin:8px 5px 5px 8px;
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		.demo01 p{
+			float:right;
+			margin-top:10px;
+			margin-right: 35px;
+			color: whitesmoke;
+		}
+		.demo02{
+			width:98%;
+			height:auto;
+			margin-bottom: 20px;
+			border:.7px solid #f8cde8;
+			border-radius:10px;
+			background:#fff9fc;
+			font-size:12px;
+			background-color:#24292e;
+			overflow: hidden;
+		}
+		
+		.demo02 img{
+			width:30px;
+			height:30px;
+			margin:8px 5px 5px 8px;
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		.demo02 p{
+			float:right;
+			margin-top:10px;
+			margin-right: 35px;
+			color: whitesmoke;
+		}
+		.demo03{
+			width:98%;
+			height:auto;
+			margin-bottom: 25px;
+			border:.7px solid #5094e2;
+			border-radius:10px;
+			background:white;
+			font-size:12px;
+			background-color:#24292e;
+			overflow: hidden;
+		}
+		
+		.demo03 img{
+			width:30px;
+			height:30px;
+			margin:8px 5px 5px 8px;
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		.demo03 p{
+			float: right;
+			margin-top:10px;
+			margin-right: 25px;
+			color: whitesmoke;
+		}
+		.demo04{
+			width:98%;
+			height:20px;
+			margin-bottom: 20px;
+		}
+		.demo04 p{
+			font-size: 13px;
+			color:#242969;
+		}
+		.demo05{
+			width:98%;
+			height:90px;
+			margin-bottom: 20px;
+			border-bottom:1px solid #E1E4E8;/*灰色的分割线*/
+			font-size:13px;
+			color:#586080;
+		}
+		.demo05 a,.demo06 a,.demo07 a{
+			display: block;
+			color:#586080;
+			text-align: left;
+			text-decoration: none;
+		}
+		.demo05 a:hover,.demo06 a:hover,.demo07 a:hover{
+			color:#0366D6;
+		}
+		.demo06{
+			width:98%;
+			height:110px;
+			margin-bottom: 20px;
+			border-bottom:1px solid #E1E4E8;
+			font-size:13px;
+			color:#586080;
+		}
+		.demo07{
+			width:98%;
+			height:90px;
+			font-size:13px;
+			color:#586080;
+		}
+		
+		.like{ position: absolute;bottom: 0px;right: 5px;font-size:33px;  color:#ccc; cursor:pointer;}
+		.like3{ position: absolute;bottom: 0px;right: 100px;font-size:35px;  color:#ccc; cursor:pointer;}
+		.like2{ position: absolute;bottom: 0px;right: 50px;font-size:35px;  color:#ccc; cursor:pointer;}
+		.cs{color:#f00;}
+		.add{width: 30px;
+			height: 30px;
+			position:absolute;
+			right:100%;
+			top:10px;
+			background-color: #24292e;
+			color: whitesmoke;
+		}
+		.new{
+			display: none;
+			position:absolute;
+			z-index: 99999;
+			right:60px;
+			top:80px;
+			background-color: white;
+			width:130px;
+			height:70px;
+		}
+		.new a{
+			border-radius: 3px;
+			border:1px solid #d1d5da;
+		}
+		.right_mid06{
+			width:65%;
+			height:30px;
+			position:relative;
+		}
+		.shl{
+			color: aqua;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="new" id="newpb">
+		<a href="index2.html">new post</a>
+		<a href="index3.html">new blog</a>
+		<a href="index4.html">new resource</a>
+	</div>
+	<div class="heading">
+		<div class="heading_img">
+			<img src="img/Infohub.png" alt="头像"/>
+		</div>
+		<div class="heading_searchbox">
+			<form>
+			<input type="text" placeholder="Search or jump to...">
+			
+			</form>
+		</div>
+		<div class="heading_navbar">
+			<ul>
+				<li><a href="#">Pull resqusts</a></li>
+				<li><a href="#">Lssues</a></li>
+				<li><a href="#">Marketplace</a></li>
+				<li><a href="#">Explore</a></li>
+			</ul>
+		</div>
+		<div class="heading_right">
+			<ul>
+			<li><img src="img/1.1.png"></li>
+			
+			<li>
+			 <button type="button" class="add" id="addpb" >+</button>
+			<li><img class="heading_right_touxiang" src="img/2.png"/></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="body">
+		<div class="body_left">
+			<div class="body_left_one">
+				<img src="img/1.webp">
+				<h6>仓仓king</h6>
+				<button type="botton">Follow</button>
+			</div>
+			<div class="body_left_1">
+				
+				<h6>高中生</h6>
+				
+			</div>
+			<div class="body_left_two">
+				<form>
+				<input type="text" placeholder="Find a repository...">
+				</form>
+			</div>
+			
+		</div>
+		
+		<div class="body_right">
+			<div class="right_mid">
+				<h4 class="hhhh">求问学长学姐怎么学<<数据结构>>？？？</h4>
+				<p>
+					lz大一，下学期学数据结构，想了解一下这门课的难度如何，有没有哪些需要注意的地方
+				</p>
+				
+			    <br>
+				<br>
+				
+			</div>
+			<div class="right_mid06">
+				<div class="like3">&#10150;</div>
+				<div class="like2">&#9733;</div>
+				<div class="like">&#10084;</div>
+			</div>
+			<div class="right_mid02">
+				<form>
+				<input type="text" placeholder="Leave a comment....." id="ip">
+				</form>
+				<button type="botton" id="btr">Submit</button>
+			</div>
+			<div class="right_mid05" id="com">
+				<div class="comt1">
+					<img src="img/avatar3.png">
+					<p>
+					<strong class="shl">懒大王</strong>
+					<br/>
+					难度还可以，只要课上认真听就行。
+					</p>
+					
+				</div>
+				<div class="comt1">
+					<img src="img/avatar5.png">
+					<p>
+					<strong class="shl">宇宙第一帅</strong>
+					<br/>
+					上b站看一些视频，多练练一些代码就行了。加油，不是很难。
+					</p>
+					
+				</div>
+			</div>
+			
+			<div class="right_mid03">
+				<img src="img/Infohub.png"/>
+				<p>© 2023 InfoHub, Inc.</p>
+				<table class="right_mid04">
+					<tr>
+						<td>Blog</td>
+						<td>API</td>
+						<td>Terms</td>
+					</tr>
+					<tr>
+						<td>About</td>
+						<td>Training</td>
+						<td>Privacy</td>
+					</tr>
+					<tr>
+						<td>Shop</td>
+						<td>Status</td>
+						<td>Help</td>
+					</tr>
+					<tr>
+						<td>Contact GitHub</td>
+						<td>Security</td>				
+					</tr>
+					<tr>
+						<td>Pricing</td>						
+					</tr>
+				</table>
+			</div>
+			
+			<div class="right_right">
+				<div class="demo01">
+					<div class="comp1"><img src="img/dem01.png"/></div>
+					
+						
+					
+					<p>
+					<strong>InfoHub Actions beta, now with CI/CD</strong>
+					<br/>
+					Automate any workflow with InfoHub Actions.
+					<br/>
+					See the latest updates and register for the beta.
+					
+					
+					</p>
+					
+					
+				</div>
+				<div class="demo02">
+					<img src="img/dem02.png"/>
+					<p>
+					<strong>InfoHub Sponsors Matching Fund</strong>
+					<br/>
+					Ready to support open source? InfoHub will 
+					<br/>
+					match your contribution to developers during  
+					<br/>
+					their first year in InfoHub Sponsors.
+					
+					
+					</p>
+					
+				</div>
+				<div class="demo03">
+					<img src="img/dem03.png"/>
+					<p>
+					<strong>Welcome to the new dashboard. Get closer to
+					<br/>
+					the stuff you care about most.
+					</strong>				
+					</p>
+					
+				</div>
+				<div class="demo04">
+					<p><strong>Explore repositories</strong></p>
+				</div>
+				<div class="demo05">
+					<p>
+					<strong>
+					<a href="#">termux/termux-packages</a>
+					</strong>						
+					Android terminal and Linux environment - packages repository.
+					</p>
+				</div>
+				<div class="demo06">
+					<p>
+					<strong>
+					<a href="#">okbob/pspg</a>
+					</strong>						
+					Unix pager designed for work with tables. Designed for PostgreSQL, but MySQL is supported too. Now it can be used as CSV viewer.
+					</p>
+				</div>
+				<div class="demo07">
+					<p>
+					<strong>
+					<a href="#">ngneat/transloco</a>
+					</strong>						
+					The internationalization (i18n) library for Angular.
+					</p>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	
+	var btr=document.getElementById("btr");
+	var ip=document.getElementById("ip");
+	var com=document.getElementById("com");
+	btr.onclick=function()
+	{
+		var value=ip.value;
+		var div=document.createElement("div");
+		
+		var lis=`<img src='img/2.png'><p><strong class="shl">Root</strong><br/>${value}</p>`
+		div.innerHTML=lis;
+		div.setAttribute("style","width:90%;height:80px;margin-bottom: 20px;border:.7px solid #4e94e2;border-radius:10px;background:#24292e;font-size:12px;color:#586080;");
+		com.appendChild(div);
+		ip.value="";
+		ip.focus();
+		
+	}
+	
+	$(function () {
+	    $(".like").click(function () {
+	        $(this).toggleClass('cs');                
+	    })
+	})
+	$(function () {
+	    $(".like2").click(function () {
+	        $(this).toggleClass('cs');                
+	    })
+	})
+	
+</script>
+<script>
+	var add=document.getElementById("addpb");
+	add.onclick=function()
+	{
+		var s=document.getElementById("newpb");
+		
+		if(s.style.display=="none"){
+			s.style.display="block";
+		}
+		else{
+			s.style.display="none";
+		}
+	}
+</script>
+</body>
+</html>
