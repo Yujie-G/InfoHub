@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>前端-个人页面</title>
   <link rel="stylesheet" type="text/css" href="profile_style.css" />
-  <link rel="icon" type="image/x-icon" href="./img/logo.ico" />
+  <link rel="icon" type="image/x-icon" href="./img/logo.png" />
   <!-- 连接外部css文件 -->
 
   <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
@@ -96,7 +96,8 @@
   <div class="heading">
     <div class="heading_img">
       <!-- logo -->
-      <img src="./img/logo.png" alt="logo"></img>
+      <a href="#"><img src="./img/logo.png" alt="logo"></a>
+
     </div>
 
     <div class="heading_searchbox">
@@ -107,7 +108,7 @@
     <div class="heading_navbar">
       <ul>
 
-        <li><a href="#">Lssues</a></li>
+        <li><a href="#">Resource</a></li>
 
         <li><a href="#">Explore</a></li>
       </ul>
@@ -115,7 +116,7 @@
     <div class="heading_right">
       <img src="./img/铃铛.jpg" />
       <img src="./img/加号.jpg" />
-      <img class="heading_right_touxiang" src="./img/avatar/avatar1.png" />
+      <img class="heading_right_touxiang" src="./img/author-sm.png" />
     </div>
 
   </div>
@@ -128,14 +129,14 @@
 
       <div class="avatar">
         <!-- Avatar image -->
-        <img class="avatar__image" src="./img/avatar/avatar1.png" />
+        <img class="avatar__image" src="./img/author-sm.png" />
 
       </div>
       <br>
 
       <div class="name_text">
         <br><br>
-        不爱吃早饭
+        root
 
       </div>
 
@@ -174,7 +175,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">18:22 May 22
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -207,7 +208,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">14:43 May 19
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -242,7 +243,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">23:33 May 16
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -274,7 +275,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">21:55 May 15
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -305,7 +306,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">11:21 May19
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -352,7 +353,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">00:55 May 15
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -384,7 +385,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">13:56 May 19
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -418,7 +419,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">01:55 May 19
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -452,7 +453,7 @@
                     <span class="fas fa-clock text-primary"></span>
                     <a class="ml-1">01:55 May 19
                       <br>
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
                   </li>
                   <li class="d-inline-block">
@@ -534,7 +535,7 @@
                       <br>
 
 
-                      <img src="./img/avatar/avatar1.png" alt="" />
+                      <img src="./img/author-sm.png" alt="" />
                     </a>
 
                   </li>
@@ -608,20 +609,40 @@
 
 
     <div class="bottom">
-      <div class="bottom_top_left">
-        <div class="bottom_top_left_img">
-          <img src="./img/logo.png" alt="Logo" width="64">
-        </div>
-        <div class="bottom_top_left_h">
-          <h4>Infohub</h4>
 
-          <p><br>This is for homework!</p>
+      <div class="row text-center">
+
+
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4">Inspirations</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4" style="font-family:  Barlow Condensed, sans-serif;">Templates</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4">Resource</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
         </div>
       </div>
-      <div class="bottom_top_right">
 
 
-      </div>
     </div>
   </div>
 
