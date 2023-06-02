@@ -142,9 +142,9 @@ body{ background:#000000}
 
 .name_text{
 padding-top:40px;
-color: rgb(128, 128, 128);
+color: rgb(214, 214, 214);
 font-family:黑体;
-font-size: larger;
+font-size:xx-large;
 font-weight: bold;
 margin:0 auto;
 text-align: center;
@@ -235,6 +235,10 @@ text-overflow:ellipsis;
 display:-webkit-box;           
 -webkit-line-clamp:2;         
 -webkit-box-orient:vertical;
+}
+a{
+
+	font-family: Hanken;
 }
 a:link { 
 	color:#9c9b9b;  
