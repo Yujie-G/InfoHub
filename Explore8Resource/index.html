@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Explore -InfoHub</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="galaxy" />
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- START preloader-wrapper -->
+    <div class="preloader-wrapper">
+        <div class="preloader-inner">
+            <div class="spinner-border text-red"></div>
+        </div>
+    </div>
+    <!-- END preloader-wrapper -->
+
+    <!-- START main-wrapper -->
+    <section class="d-flex">
+
+        <!-- start of sidenav -->
+        <aside>
+            <div class="sidenav position-sticky d-flex flex-column justify-content-between">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.ico" alt="">
+                    </a>
+                </div>
+                <!-- end of navbar-brand -->
+                <div class="widget text-center">
+                    <img class="author-thumb-sm rounded-circle d-block mx-auto" src="images/author-sm.png" alt="">
+                    <h2 class="widget-title text-white d-inline-block mt-4">root</h2>
+                    <p class="mt-4">UID:00001</p>
+                </div>
+                <!-- end of author-widget -->
+                <div class="col-lg-4 col-md-5 mx-auto">
+                    <div class="navbar navbar-dark my-4 p-0 font-primary text-center">
+                        <ul class="navbar-nav w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white px-0 pt-0" href="index.html">Explore</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white px-0" href="resource.html">Resource</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white px-0" href="event.html">Events</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of navbar -->
+                </div>
+        </aside>
+        <!-- end of sidenav -->
+        <div class="main-content">
+            <!-- start of mobile-nav -->
+            <header class="mobile-nav pt-4">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <a href="index.html">
+                                <img src="images/logo.ico" alt="" class="logo">
+                            </a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button class="nav-toggle bg-transparent border text-white">
+                                <span class="fas fa-bars"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="nav-toggle-overlay"></div>
+            <!-- end of mobile-nav -->
+
+
+            <div class="container mt-5">
+                <div class="row justify-content-between">
+                    <i id="menu-toggle"></i>
+                    <i id="menu-close"></i>
+                    <div class="isotope-wrapper col-lg-7">
+                        <form class="isotope-toolbar position-sticky">
+                            <label>
+                                <input type="radio" data-type="*" checked="" name="isotope-filter" />
+                                <span>All</span>
+                            </label>
+                            <label>
+                                <input type="radio" data-type="msg" name="isotope-filter" />
+                                <span>Post</span>
+                            </label>
+                            <label>
+                                <input type="radio" data-type="blog" name="isotope-filter" />
+                                <span>Blog</span>
+                            </label>
+                        </form>
+                        <div class="isotope-box">
+
+                            <div class="isotope-item blog-card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title text-center">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\blog0.html">
+                                            How to be good at playing basketball
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 text-center">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">17:12, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-hashtag text-primary"></span>
+                                            <a class="ml-1" href="#">Coding</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-location-arrow text-primary"></span>
+                                            <a class="ml-1">Peking</a>
+                                            <!-- <a class="ml-1" href="#">Peking</a> -->
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        Basketball requires speed, height and skills.
+                                        I run, jump, switch, and try to hit! All parts of my body are exercised in this
+                                        sport
+                                        ...
+                                    </p>
+                                    <div class="text-right mr-3">
+                                        <a href="..\\post-blog\\blog0.html" class="btn btn-primary">Read More <img
+                                                src="images/arrow-right.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="msg">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\post3.html">
+                                            大类分流
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">16:17, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">打听求助</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        网络空间安全学院中物联网工程和信息安全这两个专业大家有什么建议吗？
+                                        信息安全相比信安法双学位是不是略失优势啊，物联网会因为学的多而不精嘛
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+                            <div class="isotope-item blog-card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title text-center">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\blog1.html">
+                                            四六级到底应该如何备考？
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 text-center">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">14:17, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-hashtag text-primary"></span>
+                                            <a class="ml-1" href="#">Coding</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-location-arrow text-primary"></span>
+                                            <a class="ml-1">Peking</a>
+                                            <!-- <a class="ml-1" href="#">Peking</a> -->
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        Step1: 入手一本四六级单词书。
+                                        我个人在备考四六级的时候用的都是新东方的四六级单词书。
+                                        备考任何英语考试，背单词都是必不可少的一步。
+                                        学习建议：
+                                        如果意志力比较强，规划能力强，可以给自己
+                                        ...
+                                    </p>
+                                    <div class="text-right mr-3">
+                                        <a href="..\\post-blog\\blog1.html" class="btn btn-primary">Read More <img
+                                                src="images/arrow-right.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="msg">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\post1.html">
+                                            求问学长学姐怎么学《数据结构》
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">14:11, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">打听求助</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        lz大一，下学期学数据结构，想了解一下这门课的难度如何，有没有哪些需要注意的地方......
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item blog-card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title text-center">
+                                        <a class="text-white opacity-75-onHover text-center" href="..\\post-blog\\blog2.html">
+                                            软件工程的方向与学习方法
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 text-center">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">09:12, May 12th</a>
+                                        </li>
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-hashtag text-primary"></span>
+                                            <a class="ml-1" href="#">Coding</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-location-arrow text-primary"></span>
+                                            <a class="ml-1">Tianjin</a>
+                                            <!-- <a class="ml-1" href="#">Peking</a> -->
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        大四软工毕业生，结合自身经历，小小总结如下：
+                                        （先脱离探讨具体技术、算法，从宏观层面看待技术学习的学习方法、如何规划、提升CS自身能力角度......
+                                    </p>
+                                    <div class="text-right mr-3">
+                                        <a href="..\\post-blog\\blog2.html" class="btn btn-primary">Read More <img
+                                                src="images/arrow-right.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="msg">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\post2.html">
+                                            求助ACM比赛
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">23:12, May 11th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">打听求助</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        想参加ACM比赛，有没有哪些需要注意的地方，或者哪些好的备赛方法......
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+
+
+                            <div class="isotope-item blog-card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title text-center">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\blog3.html">
+                                            如何沉下心来高效学习
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 text-center">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">17:12, May 11th</a>
+                                        </li>
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-hashtag text-primary"></span>
+                                            <a class="ml-1" href="#">Coding</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-location-arrow text-primary"></span>
+                                            <a class="ml-1">Shanghai</a>
+                                            <!-- <a class="ml-1" href="#">Peking</a> -->
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        首先，一个好的学习环境，对于沉下来学习是一个外在条件，当学习时处于一个 嘈杂的环境，被外界的干扰，外界事物不断吸引自己，这样这些是无法沉下心来的，
+                                        书店，自己的卧室，人比较少的一个场所，这都是一个好的环境......
+                                    </p>
+                                    <div class="text-right mr-3">
+                                        <a href="..\\post-blog\\blog3.html" class="btn btn-primary">Read More <img
+                                                src="images/arrow-right.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+
+                            <div class="isotope-item card post-item bg-transparent border-0 mb-5" data-type="msg">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\post4.html">
+                                            备战CFA考试
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1" href="#">12:12, May 11th</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="ml-1" href="#">打听求助</a>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        最近在备战CFA考试，有没有和我一样的小伙伴呢? 如果你也在备战CFA考试，欢迎来交流经验......
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+                            <div class="isotope-item blog-card post-item bg-transparent border-0 mb-5" data-type="blog">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title text-center">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\blog4.html">
+                                            大学想参加acm要做什么准备
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 text-center">
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="ml-1">09:12, May 11th</a>
+                                        </li>
+                                        <li class="d-inline-block mr-3">
+                                            <span class="fas fa-hashtag text-primary"></span>
+                                            <a class="ml-1" href="#">Competition</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-location-arrow text-primary"></span>
+                                            <a class="ml-1">Hangzhou</a>
+                                            <!-- <a class="ml-1" href="#">Peking</a> -->
+                                        </li>
+                                    </ul>
+                                    <p class="card-text my-4">
+                                        熟悉比赛规则和赛制。ACM比赛通常采用团队形式，每队由三名选手组成，比赛时间为5 个小时，需要在规定时间内解决尽可能多的题目......
+                                    </p>
+                                    <div class="text-right mr-3">
+                                        <a href="..\\post-blog\\blog4.html" class="btn btn-primary">Read More <img
+                                                src="images/arrow-right.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of post-item -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5">
+                        <div class="widget">
+                            <div class="mb-5 text-center mt-5">
+                                <h3 class="widget-title text-white d-inline-block">Trending</h3>
+                            </div>
+                            <div class="card post-item bg-transparent border-0 mb-5">
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="post-details.html">
+                                            求助ACM比赛
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 mb-4">
+                                        <li class="d-inline-block mx-auto">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="mx-auto" href="#">23:12, May 11th</a>
+                                        </li>
+                                        <li class="d-inline-block mx-auto">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="mx-auto" href="#">打听求助</a>
+                                        </li>
+                                    </ul>
+                                    <!-- <a href="post-details.html" class="btn btn-primary">Read More <img
+                                            src="images/arrow-right.png" alt=""></a> -->
+                                </div>
+                            </div>
+                            <!-- end of widget-post-item -->
+                            <div class="card post-item bg-transparent border-0 mb-5">
+
+                                <div class="card-body px-0">
+                                    <h2 class="card-title">
+                                        <a class="text-white opacity-75-onHover" href="..\\post-blog\\blog1.html">
+                                            四六级到底应该如何备考？
+                                        </a>
+                                    </h2>
+                                    <ul class="post-meta mt-3 mb-4">
+                                        <li class="d-inline-block mx-auto">
+                                            <span class="fas fa-clock text-primary"></span>
+                                            <a class="mx-auto" href="#">12 May, 2022</a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <span class="fas fa-list-alt text-primary"></span>
+                                            <a class="mx-auto" href="#">经验分享</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end of widget-post-item -->
+                        </div>
+                        <!-- end of post-items widget -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- start of footer -->
+            <footer>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+                            <h5 class="font-primary text-white mb-4">Inspirations</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#!">Privacy State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                                <li><a href="#!">State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+                            <h5 class="font-primary text-white mb-4">Templates</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#!">Privacy State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                                <li><a href="#!">State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+                            <h5 class="font-primary text-white mb-4">Resource</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#!">Privacy State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                                <li><a href="#!">State</a></li>
+                                <li><a href="#!">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end of footer -->
+        </div>
+
+    </section>
+    <!-- END main-wrapper -->
+
+    <!-- All JS Files -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
