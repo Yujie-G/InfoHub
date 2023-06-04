@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>前端-个人页面</title>
+  <link rel="stylesheet" type="text/css" href="profile_style.css" />
+  <link rel="icon" type="image/x-icon" href="./img/logo.png" />
+  <!-- 连接外部css文件 -->
+
+  <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".like").click(function () {
+        $(this).toggleClass('cs');
+      })
+    })
+  </script>
+</head>
+
+
+
+
+
+<style>
+  .tabs {
+    /* 整个框的样式 */
+    position: relative;
+    height: 725px;
+    /* This part sucks */
+    clear: both;
+    margin: 20px 0;
+  }
+
+  .tab {
+    float: left;
+  }
+
+  .tab label:hover {
+
+    background-color: rgb(123, 123, 123);
+  }
+
+  .tab label {
+    font-family: 华文细黑;
+    background: #474747;
+    padding: 10px;
+    /* border: 10px solid red; */
+    margin: 80px;
+    position: relative;
+
+  }
+
+  .tab [type="radio"] {
+    display: none;
+  }
+
+  .content {
+
+    position: absolute;
+    top: 28px;
+    /* 显示框 */
+    left: 0;
+    background: rgb(54, 54, 54);
+    right: 0;
+    bottom: 0;
+
+    /* 文字距离 */
+    border: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+
+
+  }
+
+  [type="radio"]:checked~label {
+    background: linear-gradient(#474747, rgb(54, 54, 54));
+
+    border: 0px;
+  }
+
+  [type="radio"]:checked~label~.content {
+    z-index: 1;
+  }
+
+  ul li {
+    list-style: none;
+
+  }
+</style>
+
+
+
+
+
+
+<body>
+  <div class="heading">
+    <div class="heading_img">
+      <!-- logo -->
+      <a href="#"><img src="./img/logo.png" alt="logo"></a>
+
+    </div>
+
+    <div class="heading_searchbox">
+      <form><input type="text" placeholder="Search or jump to...">
+        <!-- <img src="./img/1.1.png"/> -->
+      </form>
+    </div>
+    <div class="heading_navbar">
+      <ul>
+
+        <li><a href="#">Resource</a></li>
+
+        <li><a href="#">Explore</a></li>
+
+        <li><a class="pro" href=" #" style="color:rgb(222, 222, 222)">Profile</a></li>
+      </ul>
+    </div>
+    <div class="heading_right">
+      <img src="./img/铃铛.jpg" />
+      <img src="./img/加号.jpg" />
+      <img class="heading_right_touxiang" src="./img/author-sm.png" />
+    </div>
+
+  </div>
+
+  <div class="body">
+
+
+    <div class="body_left">
+
+
+      <div class="avatar">
+        <!-- Avatar image -->
+        <img class="avatar__image" src="./img/author-sm.png" />
+
+      </div>
+      <br>
+
+      <div class="name_text">
+        <br><br>
+        root
+
+      </div>
+
+    </div>
+
+
+    <div class="body_right">
+
+
+
+      <div class="tabs">
+        <div class="tab">
+          <input type="radio" id="tab-1" name="tab-group-1" checked />
+          <label for="tab-1">我的贴子</label>
+          <div class="content">
+
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    求问学长学姐们怎么学《数据结构》？
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  lz大一，下学期学数据结构，想了解一下这门课程的难度如何，有没有哪些需要注意的地方。
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">18:22 May 22
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    大类分流求助
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  网络空间安全学院中物联网工程和信息安全这两个专业大家有什么建议吗？
+                  信息安全相比信安法双学位是不是略失优势啊，物联网会因为学的多而不精嘛。先谢过各位了。
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">14:43 May 19
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    夸夸我们前端老师
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  朱老师可爱温柔，人美声甜，讲课耐心，感谢您的教导！
+
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">23:33 May 16
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    捞人捞人
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  软件ly有没有npy啊，有的话祝99
+
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">21:55 May 15
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    求助ACM比赛
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  想参加ACM比赛，有没有哪些需要注意的地方，或者哪些好的备赛方法？
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">11:21 May19
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+        <div class="tab">
+          <input type="radio" id="tab-2" name="tab-group-1" />
+          <label for="tab-2">我的资源</label>
+          <div class="content">
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    如何有效提高四六级听力？
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  最近在备考过程中发现听力成绩一直提不上去，尝试总结了一些提高听力成绩的方法。
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">00:55 May 15
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    如何写一份出色的简历？
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  大家好，我是一名找工作的应届毕业生，最近在写简历的过程中发现有很多需要注意的地方，于是我总结了一些写简历的方法和经验，希望对大家有所帮助~
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">13:56 May 19
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    分享一个学习网站，供大家使用~
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+
+                  W3Cschool是一个专业的编程入门学习及技术文档查询应用，提供包括HTML，CSS，Javascript，jQuery，C，PHP，Java，Python，Sql，Mysql等编程语言和开源技术的在线教程及使用手册，是类似国外w3schools的学习社区及菜鸟编程平台
+                  全球最大的WEB技术资源，W3CSchool 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库。
+                  <br>W3c网站传送门：https://www.http://w3school.com.cn/
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">01:55 May 19
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    告诉大家一个包罗万象的资源网站，以后找资料可以先来这里看看~
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+
+                  致力于软件安全与病毒分析的前沿，丰富的技术版块交相辉映，由无数热衷于软件加密解密及反病毒爱好者共同维护，留给世界一抹值得百年回眸的惊艳，沉淀百年来计算机应用之精华与优雅，信息线条与生活质感淡定交融，任岁月流转，低调而奢华的技术交流与研究却是亘古不变。
+                  吾爱破解网站传送门：https://www.http://52pojie.cn/
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">01:55 May 19
+                      <br>
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="tab">
+          <input type="radio" id="tab-3" name="tab-group-1" />
+          <label for="tab-3">我的收藏</label>
+          <div class="content">
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    分享一个学习网站，供大家使用~
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+
+                  W3Cschool是一个专业的编程入门学习及技术文档查询应用，提供包括HTML，CSS，Javascript，jQuery，C，PHP，Java，Python，Sql，Mysql等编程语言和开源技术的在线教程及使用手册，是类似国外w3schools的学习社区及菜鸟编程平台
+                  全球最大的WEB技术资源，W3CSchool 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库。
+                  <br>W3c网站传送门：https://www.http://w3school.com.cn/
+                </p>
+
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">01:55 May 19
+                      <br>
+                      <img src="./img/avatar/avatar9.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+                    <p class="like" style="font-size: 2em;">&#9733;</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="blog">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    夸夸我们前端老师
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+                  朱老师可爱温柔，人美声甜，讲课耐心，感谢您的教导！
+
+                </p>
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">23:33 May 16
+                      <br>
+
+
+                      <img src="./img/author-sm.png" alt="" />
+                    </a>
+
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Blog</a>
+                    <p class="like" style="font-size: 2em;">&#9733;</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+
+        <div class="tab">
+          <input type="radio" id="tab-4" name="tab-group-1" />
+          <label for="tab-4">浏览历史</label>
+          <div class="content">
+
+
+            <div class="isotope-item card post-item bg-transparent border-0 mb-5" datatype="post">
+              <div class="card-body px-0">
+                <h2 class="card-title">
+                  <a class="text-white opacity-75-onHover" href="shili.html">
+
+                    分享一个学习网站，供大家使用~
+                  </a>
+                  <hr style="height:3px;border:none;border-top:3px double rgb(192, 192, 192);" />
+                </h2>
+                <p class="card-text my-4">
+
+                  W3Cschool是一个专业的编程入门学习及技术文档查询应用，提供包括HTML，CSS，Javascript，jQuery，C，PHP，Java，Python，Sql，Mysql等编程语言和开源技术的在线教程及使用手册，是类似国外w3schools的学习社区及菜鸟编程平台
+                  全球最大的WEB技术资源，W3CSchool 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库。
+                  <br>W3c网站传送门：https://www.http://w3school.com.cn/
+                </p>
+
+                <a href="shili.html" class="btn btn-primary" style="float:right">Read More </a><br>
+
+                <ul class="post-meta mt-3">
+                  <li class="d-inline-block mr-3" style="text-align:right">
+                    <span class="fas fa-clock text-primary"></span>
+                    <a class="ml-1">01:55 May 19
+                      <br>
+                      <img src="./img/avatar/avatar9.png" alt="" />
+                    </a>
+                  </li>
+                  <li class="d-inline-block">
+                    <span class="fas fa-list-alt text-primary"></span>
+                    <a class="ml-1" href="shili.html">Post</a>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+    <div class="bottom">
+
+      <div class="row text-center">
+
+
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4">Inspirations</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4" style="font-family:  Barlow Condensed, sans-serif;">Templates</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mx-auto">
+          <h5 class="font-primary text-white mb-4">Resource</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!">Privacy State</a></li>
+            <li><a href="#!">Privacy</a></li>
+            <li><a href="#!">State</a></li>
+            <li><a href="#!">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>
