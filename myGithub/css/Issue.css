@@ -1,0 +1,271 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*样式清除*/
+
+
+.heading {
+	width: auto;
+	height: 52px;
+	padding-top: 20px;
+	background: #24292e;
+}
+
+.heading_img img {
+	border-radius: 30px;
+	/*圆角边框，变成圆形的头像*/
+	display: inline;
+	/*在一行当中*/
+	width: 35px;
+	height: 35px;
+	float: left;
+	/*向左浮动*/
+	margin-top: -5px;
+	/*往上挪*/
+	margin-left: 15px;
+}
+
+.heading_searchbox form {
+	float: left;
+	position: relative;
+	margin-left: 15px;
+}
+
+.heading_searchbox input {
+	width: 300px;
+	height: 28px;
+	outline: none;
+	border: 1px solid #3F4448;
+	/*边框*/
+	border-radius: 3px;
+	/*显得的不那么方，有点弧度的四个角*/
+	background: #3F4448;
+	color: #fff;
+	text-indent: 7px;
+	/*字符缩进*/
+}
+
+.heading_searchbox input:focus {
+	/*点击时应该有的效果，我这里有的问题*/
+	width: 400px;
+	height: 28px;
+	outline: none;
+	background: #fff;
+	border: 1px solid #e2e3e3;
+}
+
+.heading_searchbox img {
+	/*右边我贴上去的小图标*/
+	display: block;
+	width: 34px;
+	height: 27px;
+	position: absolute;
+	/*绝对定位*/
+	top: 5px;
+	/*绝对定位离顶部的距离*/
+	left: 265px;
+	/*绝对定位离左边的距离*/
+	cursor: pointer;
+	/*鼠标放上去会变成小手*/
+}
+
+
+.heading_navbar {
+	width: 100%;
+	height: 30px;
+	position: relative;
+}
+
+.heading_navbar ul {
+	list-style: none;
+	/*去掉无序前的小点*/
+	float: left;
+	margin-left: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.heading_navbar li {
+	float: left;
+	/*垂直的导航栏可以变成水平的*/
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+	/*去a标签的下划线*/
+	display: block;
+	text-align: center;
+	/*居中*/
+}
+
+.heading_navbar a {
+	color: rgb(230, 237, 243);
+	font-size: 18px;
+}
+
+.heading_navbar a:hover {
+	color: darkgray;
+	/*鼠标放上去时变成灰色的*/
+}
+
+.heading_right {
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	width: 130px;
+	height: 50px;
+}
+
+.heading_right img {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.heading_right_touxiang {
+	border-radius: 30px;
+}
+
+
+
+.body {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: rgb(13, 17, 23);
+	box-sizing: border-box;
+	padding: 40px 200px;
+	display: flex;
+}
+
+
+
+.content {
+	display: inline-block;
+	border: 2px solid #697a8f;
+	border-radius: 10px;
+	width: 100%;
+	padding: 40px;
+    text-indent: 2em;
+	color: rgb(230, 237, 243);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.content * {
+	margin-bottom: 20px;
+	color-scheme: dark;
+	overflow-wrap: break-word;
+	color: rgb(230, 237, 243);
+}
+
+.content h1 {
+	/* width: 1120px; */
+	height: 50px;
+	border-bottom: 2px solid #244675;
+	font-size: 32px;
+	font-weight: 800;
+	color-scheme: dark;
+	color: rgb(230, 237, 243);
+}
+
+.content_head p {
+	font-size: 16px;
+	color: rgb(230, 237, 243);
+	display: block;
+
+}
+.p1{
+	text-align: center;
+	overflow:hidden;
+	margin-top: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.p2{
+	text-align: center;
+	padding: 10px;
+}
+.p2 a{
+	color: #0366d6;
+}
+
+.content a {
+	display: inline;
+	text-decoration: none;
+    font-size: 1.1em;
+}
+
+.content a:hover {
+	color: #0366d6;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+.content ul{
+	padding: 0 10px;
+	border: 1px solid #697a8f;
+	border-radius: 10px;
+	padding-top: 20px;
+}
+.content li{
+	padding: 17px 0;
+	list-style: none;
+	border: 2px solid #1e1e20;
+	border-radius: 10px;
+}
+.content li:hover{
+	background-color: #1c1e20;
+}
+
+.content strong {
+	padding: 0 3px;
+    color: rgb(192, 124, 113);
+}
+
+.content table{
+    width: 100%;
+}
+
+.content table, th, td {
+	border: 2px solid #7987b7;
+	border-collapse: collapse;
+    text-align: center;
+}
+
+.content td, th {
+	padding: 15px;
+}
+
+.content h2 {
+	margin-bottom: 16px;
+	border-bottom: 1px dashed #cdda91;
+	padding-bottom: 7.2px;
+    margin-top: 10px;
+}
+
+.content .pp {
+	padding-left: 5px;
+	border-left: 4px solid #1d2228;
+	color: #586080;
+}
+
+.content .pp strong {
+	color: #586080;
+}
+
+.li {
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+
+.content_head{
+	width: auto;
+	height: auto;
+	border: 1px solid #1f232a;
+	border-radius: 10px;
+}
